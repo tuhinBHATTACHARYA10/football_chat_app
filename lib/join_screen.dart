@@ -79,7 +79,7 @@ class _JoinScreenState extends State<JoinScreen> {
                     controller: _nameController,
                     decoration: InputDecoration(
                       labelText: "Your Nickname",
-                      hintText: "e.g., Ronaldo7",
+                      hintText: "e.g., Messi10",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
