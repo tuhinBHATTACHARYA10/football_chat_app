@@ -4,7 +4,7 @@ import 'firebase_options.dart';
 import 'join_screen.dart';
 
 // 1. Create a Global "Switch" that stores the current mode
-// We make it global so other screens can access it easily.
+//  made it global so other screens can access it easily.
 final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
 
 void main() async {
