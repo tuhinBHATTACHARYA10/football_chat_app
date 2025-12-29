@@ -35,35 +35,7 @@ The goal of this project was to solve a common problem: fans want to chat while 
 
 | Login Screen | League Select | Live Chat |
 |:---:|:---:|:---:|
-| ![Login](assets/images/screenshot_login.png) | ![Menu](assets/images/screenshot_menu.png) | ![Chat](assets/images/screenshot_chat.png) |
-*(Note: Add your screenshots to the assets folder or remove this section)*
-
-## 🔧 Installation & Setup
-
-1.  **Clone the repository**
-    ```bash
-    git clone [https://github.com/YOUR_USERNAME/football_chat_app.git](https://github.com/YOUR_USERNAME/football_chat_app.git)
-    cd football_chat_app
-    ```
-
-2.  **Install Dependencies**
-    ```bash
-    flutter pub get
-    ```
-
-3.  **Configure API Key**
-    -   Get a free API key from [football-data.org](https://www.football-data.org/).
-    -   Open `lib/football_service.dart`.
-    -   Replace `const String apiKey = 'YOUR_API_KEY_HERE';` with your key.
-
-4.  **Firebase Setup**
-    -   Create a project in the Firebase Console.
-    -   Download `google-services.json` and place it in `android/app/`.
-
-5.  **Run the App**
-    ```bash
-    flutter run
-    ```
+| ![Login](screenshot_login.png) | ![Menu](screenshot_menu.png) | ![Chat](screenshot_chat.png) |
 
 ## 🧩 Architecture Decisions
 
@@ -85,7 +57,7 @@ The project uses a custom `gradle` configuration to bridge modern Flutter plugin
 
 **Tuhin Bhattacharya**
 -   Flutter Developer | Backend Engineer
--   [LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/)
+-   [LinkedIn](https://www.linkedin.com/in/tuhin-bhattacharya-4002632a3/) | [GitHub](https://github.com/tuhinBHATTACHARYA10)
 
 ---
 *Star ⭐ this repo if you find it useful!*
