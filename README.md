@@ -1,16 +1,91 @@
-# new_app
+# ⚽ Football Chat Hub
 
-A new Flutter project.
+A real-time "Digital Stadium" experience for football fans. This hybrid mobile application combines live match data from external APIs with instant, real-time messaging powered by Firebase.
 
-## Getting Started
+Built with **Flutter** and **Firebase**.
 
-This project is a starting point for a Flutter application.
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+![Firebase](https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase)
+![Dart](https://img.shields.io/badge/dart-%230175C2.svg?style=for-the-badge&logo=dart&logoColor=white)
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Project Overview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The goal of this project was to solve a common problem: fans want to chat while watching the game, but existing apps are either just for scores (OneFootball) or just for chatting (WhatsApp). 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Football Chat Hub** merges these into one seamless interface:
+1.  **Live Data:** Users see scheduled matches and live scores.
+2.  **Live Interaction:** Users can enter a "Match Room" and chat instantly with other fans.
+
+## ✨ Key Features
+
+-   **Real-Time Messaging:** Powered by **Cloud Firestore** streams for sub-second latency.
+-   **Live Match Data:** Integrated with **football-data.org API** to fetch schedules for Premier League, La Liga, UCL, and more.
+-   **Dynamic Theming:** The app UI adapts its color scheme based on the selected league (e.g., Purple for Premier League, Orange for La Liga).
+-   **Hybrid State Management:** Uses `FutureBuilder` for API calls and `StreamBuilder` for chat updates.
+-   **Offline Resilience:** Optimized asset caching for team logos and league branding.
+
+## 🛠️ Tech Stack
+
+-   **Frontend:** Flutter (Dart)
+-   **Backend (Chat):** Firebase Cloud Firestore
+-   **Backend (Data):** REST API (football-data.org)
+-   **Architecture:** MVC Pattern (Model-View-Controller)
+
+## 📸 Screenshots
+
+| Login Screen | League Select | Live Chat |
+|:---:|:---:|:---:|
+| ![Login](assets/images/screenshot_login.png) | ![Menu](assets/images/screenshot_menu.png) | ![Chat](assets/images/screenshot_chat.png) |
+*(Note: Add your screenshots to the assets folder or remove this section)*
+
+## 🔧 Installation & Setup
+
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/YOUR_USERNAME/football_chat_app.git](https://github.com/YOUR_USERNAME/football_chat_app.git)
+    cd football_chat_app
+    ```
+
+2.  **Install Dependencies**
+    ```bash
+    flutter pub get
+    ```
+
+3.  **Configure API Key**
+    -   Get a free API key from [football-data.org](https://www.football-data.org/).
+    -   Open `lib/football_service.dart`.
+    -   Replace `const String apiKey = 'YOUR_API_KEY_HERE';` with your key.
+
+4.  **Firebase Setup**
+    -   Create a project in the Firebase Console.
+    -   Download `google-services.json` and place it in `android/app/`.
+
+5.  **Run the App**
+    ```bash
+    flutter run
+    ```
+
+## 🧩 Architecture Decisions
+
+**Why two backends?**
+I chose a hybrid approach to optimize costs and performance:
+-   **Firebase** is excellent for real-time features (chat) but expensive for storing massive amounts of static sports data.
+-   **REST API** is perfect for fetching structured data (scores/fixtures) that doesn't need to be "real-time" to the millisecond.
+
+**Handling Android versions:**
+The project uses a custom `gradle` configuration to bridge modern Flutter plugins (which demand Android 34) with older hardware stability (Android 33), ensuring smooth performance on all devices.
+
+## 🔮 Future Improvements
+
+-   [ ] **Push Notifications:** Notify users when their team scores (via Firebase Cloud Messaging).
+-   [ ] **Monetization:** Integrate Google AdMob for banner ads.
+-   [ ] **User Profiles:** Allow users to upload avatars and view stats.
+
+## 👨‍💻 Author
+
+**Tuhin Bhattacharya**
+-   Flutter Developer | Backend Engineer
+-   [LinkedIn](https://www.linkedin.com/) | [GitHub](https://github.com/)
+
+---
+*Star ⭐ this repo if you find it useful!*
